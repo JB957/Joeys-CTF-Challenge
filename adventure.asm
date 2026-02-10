@@ -2568,7 +2568,7 @@ GfxAuthor:
        .byte $F8
        .byte $A0
        .byte $40
-       .byte $00
+       .byte $01
        .byte $F8
        .byte $A8
        .byte $50
