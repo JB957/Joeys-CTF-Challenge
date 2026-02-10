@@ -2509,102 +2509,102 @@ GfxDot:
                                                                                                                    
 ;Object #4 : State FF : Graphic                                                                                    
 GfxAuthor:
-       .byte $F0                  ;XXXX                                                                      
-       .byte $80                  ;X                                                                         
-       .byte $80                  ;X                                                                         
-       .byte $80                  ;X                                                                         
-       .byte $F4                  ;XXXX X                                                                    
-       .byte $04                  ;     X                                                                    
-       .byte $87                  ;X    XXX                                                                  
-       .byte $E5                  ;XXX  X X                                                                  
-       .byte $87                  ;X    XXX                                                                  
-       .byte $80                  ;X                                                                         
-       .byte $05                  ;     X X                                                                  
-       .byte $E5                  ;XXX  X X                                                                 
-       .byte $A7                  ;X X  XXX                                                                  
-       .byte $E1                  ;XXX    X                                                                  
-       .byte $87                  ;X    XXX                                                                  
-       .byte $E0                  ;XXX                                                                       
-       .byte $01                  ;       X                                                                  
-       .byte $E0                  ;XXX                                                                       
-       .byte $A0                  ;X X                                                                       
-       .byte $F0                  ;XXXX                                                                      
-       .byte $01                  ;       X                                                                  
-       .byte $40                  ; X                                                                        
-       .byte $E0                  ;XXX                                                                       
-       .byte $40                  ; X                                                                       
-       .byte $40                  ; X                                                                        
-       .byte $40                  ; X                                                                        
-       .byte $01                  ;       X                                                                  
-       .byte $E0                  ;XXX                                                                       
-       .byte $A0                  ;X X                                                                       
-       .byte $E0                  ;XXX                                                                       
-       .byte $80                  ;X                                                                         
-       .byte $E0                  ;XXX                                                                       
-       .byte $01                  ;       X                                                                  
-       .byte $20                  ;  X                                                                       
-       .byte $20                  ;  X                                                                       
-       .byte $E0                  ;XXX                                                                       
-       .byte $A0                  ;X X                                                                       
-       .byte $E0                  ;XXX                                                                       
-       .byte $01                  ;       X                                                                  
-       .byte $01                  ;       X                                                                  
-       .byte $01                  ;       X                                                                  
-       .byte $88                  ;   X   X                                                                  
-       .byte $A8                  ;X X X                                                                     
-       .byte $A8                  ;X X X                                                                     
-       .byte $A8                  ;X X X                                                                     
-       .byte $F8                  ;XXXXX                                                                     
-       .byte $01                  ;       X                                                                  
-       .byte $E0                  ;XXX                                                                       
-       .byte $A0                  ;X X                                                                       
-       .byte $F0                  ;XXXX                                                                      
-       .byte $01                  ;       X                                                                  
-       .byte $80                  ;X                                                                         
-       .byte $E0                  ;XXX                                                                       
-       .byte $8F                  ;X   XXXX                                                                 
-       .byte $89                  ;X   X  X                                                                  
-       .byte $0F                  ;    XXXX                                                                  
-       .byte $8A                  ;X   X X                                                                   
-       .byte $E9                  ;XXX X  X                                                                  
-       .byte $80                  ;X                                                                         
-       .byte $8E                  ;X   XXX                                                                   
-       .byte $0A                  ;    X X                                                                   
-       .byte $EE                  ;XXX XXX                                                                   
-       .byte $A0                  ;X X                                                                      
-       .byte $E8                  ;XXX X                                                                     
-       .byte $88                  ;X   X                                                                     
-       .byte $EE                  ;XXX XXX                                                                   
-       .byte $0A                  ;    X X                                                                   
-       .byte $8E                  ;X   XXX                                                                   
-       .byte $E0                  ;XXX                                                                       
-       .byte $A4                  ;X X  X                                                                    
-       .byte $A4                  ;X X  X                                                                    
-       .byte $04                  ;     X                                                                    
-       .byte $80                  ;X                                                                         
-       .byte $08                  ;    X                                                                     
-       .byte $0E                  ;    XXX                                                                   
-       .byte $0A                  ;    X X                                                                   
-       .byte $0A                  ;    X X                                                                   
-       .byte $80                  ;X                                                                         
-       .byte $0E                  ;    XXX                                                                   
-       .byte $0A                  ;    X X                                                                   
-       .byte $0E                  ;    XXX                                                                   
-       .byte $08                  ;    X                                                                     
-       .byte $0E                  ;    XXX                                                                   
-       .byte $80                  ;X                                                                         
-       .byte $04                  ;     X                                                                    
-       .byte $0E                  ;    XXX                                                                   
-       .byte $04                  ;     X                                                                    
-       .byte $04                  ;     X                                                                    
-       .byte $04                  ;     X                                                                    
-       .byte $80                  ;X                                                                         
-       .byte $04                  ;     X                                                                    
-       .byte $0E                  ;    XXX                                                                   
-       .byte $04                  ;     X                                                                    
-       .byte $04                  ;     X                                                                    
-       .byte $04                  ;     X                                                                    
-       .byte $00                                                                                                   
+       .byte $11
+       .byte $1F
+       .byte $11
+       .byte $80
+       .byte $17
+       .byte $15
+       .byte $1D
+       .byte $80
+       .byte $01
+       .byte $1F
+       .byte $01
+       .byte $80
+       .byte $17
+       .byte $15
+       .byte $1D
+       .byte $80
+       .byte $04
+       .byte $1F
+       .byte $11
+       .byte $80
+       .byte $18
+       .byte $10
+       .byte $1F
+       .byte $80
+       .byte $1F
+       .byte $05
+       .byte $1F
+       .byte $80
+       .byte $1F
+       .byte $05
+       .byte $1A
+       .byte $80
+       .byte $1F
+       .byte $15
+       .byte $11
+       .byte $80
+       .byte $1F
+       .byte $11
+       .byte $0E
+       .byte $80
+       .byte $10
+       .byte $10
+       .byte $10
+       .byte $80
+       .byte $1F
+       .byte $11
+       .byte $11
+       .byte $80
+       .byte $1F
+       .byte $05
+       .byte $1F
+       .byte $80
+       .byte $1F
+       .byte $06
+       .byte $1F
+       .byte $80
+       .byte $1F
+       .byte $05
+       .byte $07
+       .byte $80
+       .byte $1F
+       .byte $15
+       .byte $0A
+       .byte $80
+       .byte $1F
+       .byte $15
+       .byte $11
+       .byte $80
+       .byte $1F
+       .byte $10
+       .byte $10
+       .byte $80
+       .byte $1F
+       .byte $10
+       .byte $10
+       .byte $80
+       .byte $11
+       .byte $1F
+       .byte $04
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $00
                                                                                                                    
 ;Object $4 : Author's Name   
 AuthorInfo:                                                                                      
