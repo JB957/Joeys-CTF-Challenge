@@ -2512,59 +2512,59 @@ GfxAuthor:
        .byte $88
        .byte $F8
        .byte $88
-       .byte $01
+       .byte $00
        .byte $E8
        .byte $A8
        .byte $B8
-       .byte $01
+       .byte $00
        .byte $80
        .byte $F8
        .byte $80
-       .byte $01
+       .byte $00
        .byte $E8
        .byte $A8
        .byte $B8
-       .byte $01
+       .byte $00
        .byte $20
        .byte $F8
        .byte $88
-       .byte $01
+       .byte $00
        .byte $18
        .byte $08
        .byte $F8
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $A0
        .byte $F8
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $A0
        .byte $58
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $A8
        .byte $88
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $88
        .byte $70
-       .byte $01
+       .byte $00
        .byte $08
        .byte $08
        .byte $08
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $88
        .byte $88
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $A0
        .byte $F8
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $60
        .byte $F8
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $A0
        .byte $40
@@ -2572,40 +2572,24 @@ GfxAuthor:
        .byte $F8
        .byte $A8
        .byte $50
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $A8
        .byte $88
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $08
        .byte $08
-       .byte $01
+       .byte $00
        .byte $F8
        .byte $08
        .byte $08
-       .byte $01
+       .byte $00
        .byte $88
        .byte $F8
        .byte $20
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
-       .byte $01
        .byte $00
-                                                                                                                   
+
 ;Object $4 : Author's Name   
 AuthorInfo:                                                                                      
        .byte $1E,$50,$69          ;Room 1E, (50, 69)                                                             
