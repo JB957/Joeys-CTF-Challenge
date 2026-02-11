@@ -2509,87 +2509,103 @@ GfxDot:
                                                                                                                    
 ;Object #4 : State FF : Graphic                                                                                    
 GfxAuthor:
-       .byte $88
-       .byte $F8
-       .byte $88
-       .byte $00
-       .byte $E8
-       .byte $A8
-       .byte $B8
-       .byte $00
+       .byte $11
+       .byte $1F
+       .byte $11
        .byte $80
-       .byte $F8
+       .byte $17
+       .byte $15
+       .byte $1D
        .byte $80
-       .byte $00
-       .byte $E8
-       .byte $A8
-       .byte $B8
-       .byte $00
-       .byte $20
-       .byte $F8
-       .byte $88
-       .byte $00
-       .byte $18
-       .byte $08
-       .byte $F8
-       .byte $00
-       .byte $F8
-       .byte $A0
-       .byte $F8
-       .byte $00
-       .byte $F8
-       .byte $A0
-       .byte $58
-       .byte $00
-       .byte $F8
-       .byte $A8
-       .byte $88
-       .byte $00
-       .byte $F8
-       .byte $88
-       .byte $70
-       .byte $00
-       .byte $08
-       .byte $08
-       .byte $08
-       .byte $00
-       .byte $F8
-       .byte $88
-       .byte $88
-       .byte $00
-       .byte $F8
-       .byte $A0
-       .byte $F8
-       .byte $00
-       .byte $F8
-       .byte $60
-       .byte $F8
-       .byte $00
-       .byte $F8
-       .byte $A0
-       .byte $40
        .byte $01
-       .byte $F8
-       .byte $A8
-       .byte $50
-       .byte $00
-       .byte $F8
-       .byte $A8
-       .byte $88
-       .byte $00
-       .byte $F8
-       .byte $08
-       .byte $08
-       .byte $00
-       .byte $F8
-       .byte $08
-       .byte $08
-       .byte $00
-       .byte $88
-       .byte $F8
-       .byte $20
-       .byte $00
-
+       .byte $1F
+       .byte $01
+       .byte $80
+       .byte $17
+       .byte $15
+       .byte $1D
+       .byte $80
+       .byte $04
+       .byte $1F
+       .byte $11
+       .byte $80
+       .byte $18
+       .byte $10
+       .byte $1F
+       .byte $80
+       .byte $1F
+       .byte $05
+       .byte $1F
+       .byte $80
+       .byte $1F
+       .byte $05
+       .byte $1A
+       .byte $80
+       .byte $1F
+       .byte $15
+       .byte $11
+       .byte $80
+       .byte $1F
+       .byte $11
+       .byte $0E
+       .byte $80
+       .byte $10
+       .byte $10
+       .byte $10
+       .byte $80
+       .byte $1F
+       .byte $11
+       .byte $11
+       .byte $80
+       .byte $1F
+       .byte $05
+       .byte $1F
+       .byte $80
+       .byte $1F
+       .byte $06
+       .byte $1F
+       .byte $80
+       .byte $1F
+       .byte $05
+       .byte $07
+       .byte $80
+       .byte $1F
+       .byte $15
+       .byte $0A
+       .byte $80
+       .byte $1F
+       .byte $15
+       .byte $11
+       .byte $80
+       .byte $1F
+       .byte $10
+       .byte $10
+       .byte $80
+       .byte $1F
+       .byte $10
+       .byte $10
+       .byte $80
+       .byte $11
+       .byte $1F
+       .byte $04
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $80
+       .byte $00                                                        
+                                                                                                                   
 ;Object $4 : Author's Name   
 AuthorInfo:                                                                                      
        .byte $1E,$50,$69          ;Room 1E, (50, 69)                                                             
@@ -2755,7 +2771,7 @@ Store9:
 LFF4D:       .byte <PortInfo1,>PortInfo1,    $C8,$00,                      <PortStates,>PortStates,          $00,$00,$00      ;#1 Portcullis #1       Black            09                  
 LFF56:       .byte <PortInfo2,>PortInfo2,    $C9,$00,                      <PortStates,>PortStates,          $00,$00,$00      ;#2 Portcullis #2       Black            12             
 LFF5F:       .byte <PortInfo3,>PortInfo3,    $CA,$00,                      <PortStates,>PortStates,          $00,$00,$00      ;#3 Portcullis #3       Black            1B             
-LFF68:       .byte <AuthorInfo,>AuthorInfo,  <AuthorCurr,>AuthorCurr,      <AuthorStates,>AuthorStates,      $CB,$00,$00      ;#4 Name                Flash                
+LFF68:       .byte <AuthorInfo,>AuthorInfo,  <AuthorCurr,>AuthorCurr,      <AuthorStates,>AuthorStates,      $CB,$00,$00      ;#4 Name                Flash            24                
 LFF71:       .byte <NumberInfo,>NumberInfo,  $DD,$00,                      <NumberStates,>NumberStates,      $C8,$00,$00      ;#5 Number              Green            2D              
 LFF7A:       .byte $A4,$00,                  $A8,$00,                      <DragonStates,>DragonStates,      $36,$0E,$00      ;#6 Dragon #1           Red              36                   
 LFF83:       .byte $A9,$00,                  $AD,$00,                      <DragonStates,>DragonStates,      $1A,$06,$00      ;#7 Dragon #2           Yellow           3F                      
