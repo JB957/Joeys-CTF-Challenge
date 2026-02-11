@@ -553,14 +553,14 @@ ChangeColor:
        BCC    ChangeColor_2       ;      then the room is to flash.                                          ;2    
                                                                                                                    
        TAY                        ;Use color as an index (usually E5- the low counter).                      ;2    
-       LDA.wy $0080,Y             ;Get flash color (usually the low counter.)                                ;4    
+       JMP    ChangeColor_2       ;Disable flash-color lookup.                                                ;3    
 
 ChangeColor_2:                                                                                                                   
        LDY    $E6                 ;Get the input counter.                                                    ;3    
        BPL    ChangeColor_3       ;If console/joystick moved reciently then branch.                          ;2    
                                                                                                                    
-       EOR    $E6                 ;Merge the high counter with the color wanted.                             ;3    
-       AND    #$FB                ;Keep this color bug merge down the luminance.                             ;2    
+       ORA    #$00                ;Disable idle color pulsing.                                                ;2    
+       ORA    #$00                ;Disable idle color pulsing.                                                ;2    
 
 ChangeColor_3:                                                                                                                   
        ASL                        ;And restore original color if necessary.                                  ;2    
@@ -2645,9 +2645,9 @@ LFE48:  .byte <BlueMaze1,>BlueMaze1,                  $86,$0A,$21,$1D,$06,$08,$0
 LFE51:  .byte <BlueMazeBottom,>BlueMazeBottom,        $86,$0A,$21,$07,$04,$03,$05      ;06; Bottom of Blue Maze                  Blue               
 LFE5A:  .byte <BlueMazeCenter,>BlueMazeCenter,        $86,$0A,$21,$04,$08,$06,$08      ;07; Center of Blue Maze                  Blue               
 LFE63:  .byte <BlueMazeEntry,>BlueMazeEntry,          $86,$0A,$21,$05,$07,$01,$07      ;08; Blue Maze Entry                        Blue             
-LFE6C:  .byte <MazeMiddle,>MazeMiddle,                $08,$08,$25,$0A,$0A,$0B,$0A      ;09; Maze Middle                               Invisible     
-LFE75:  .byte <MazeEntry,>MazeEntry,                  $08,$08,$25,$03,$09,$09,$09      ;0A; Maze Entry                              Invisible       
-LFE7E:  .byte <MazeSide,>MazeSide,                    $08,$08,$25,$09,$0C,$1C,$0D      ;0B; Maze Side                              Invisible      Re
+LFE6C:  .byte <MazeMiddle,>MazeMiddle,                $0A,$0A,$25,$0A,$0A,$0B,$0A      ;09; Maze Middle                               Gray          
+LFE75:  .byte <MazeEntry,>MazeEntry,                  $0A,$0A,$25,$03,$09,$09,$09      ;0A; Maze Entry                              Gray            
+LFE7E:  .byte <MazeSide,>MazeSide,                    $0A,$0A,$25,$09,$0C,$1C,$0D      ;0B; Maze Side                              Gray          Re
 LFE87:  .byte <SideCorridor,>SideCorridor,            $98,$0A,$61,$1C,$0D,$1D,$0B      ;0C; (Side Corridor)                                         
 LFE90:  .byte <SideCorridor,>SideCorridor,            $B8,$0A,$A1,$0F,$0B,$0E,$0C      ;0D; (Side Corridor)                                         
 LFE99:  .byte <TopEntryRoom,>TopEntryRoom,            $A8,$0A,$21,$0D,$10,$0F,$10      ;0E; (Top Entry Room)                                        
@@ -2655,10 +2655,10 @@ LFEA2:  .byte <CastleDef,>CastleDef,                  $0C,$0C,$21,$0E,$0F,$0D,$0
 LFEAB:  .byte <CastleDef,>CastleDef,                  $00,$02,$21,$01,$1C,$04,$1C      ;10; Black Castle                              Black         
 LFEB4:  .byte <CastleDef,>CastleDef,                  $1A,$0A,$21,$06,$03,$02,$01      ;11; Yellow Castle                        Yellow             
 LFEBD:  .byte <NumberRoom,>NumberRoom,                $1A,$0A,$21,$12,$12,$12,$12      ;12; Yellow Castle Entry                   Yellow            
-LFEC6:  .byte <BlackMaze1,>BlackMaze1,                $08,$08,$25,$15,$14,$15,$16      ;13; Black Maze #1                          Invisible      Re
-LFECF:  .byte <BlackMaze2,>BlackMaze2,                $08,$08,$24,$16,$15,$16,$13      ;14; Black Maze #2                        Invisible      Dupl
-LFED8:  .byte <BlackMaze3,>BlackMaze3,                $08,$08,$24,$13,$16,$13,$14      ;15; Black Maze #3                        Invisible      Dupl
-LFEE1:  .byte <BlackMazeEntry,>BlackMazeEntry,        $08,$08,$25,$14,$13,$1B,$15      ;16; Black Maze Entry                        Invisible      R
+LFEC6:  .byte <BlackMaze1,>BlackMaze1,                $0A,$0A,$25,$15,$14,$15,$16      ;13; Black Maze #1                          Gray          Re
+LFECF:  .byte <BlackMaze2,>BlackMaze2,                $0A,$0A,$24,$16,$15,$16,$13      ;14; Black Maze #2                        Gray          Dupl
+LFED8:  .byte <BlackMaze3,>BlackMaze3,                $0A,$0A,$24,$13,$16,$13,$14      ;15; Black Maze #3                        Gray          Dupl
+LFEE1:  .byte <BlackMazeEntry,>BlackMazeEntry,        $0A,$0A,$25,$14,$13,$1B,$15      ;16; Black Maze Entry                        Gray          R
 LFEEA:  .byte <RedMaze1,>RedMaze1,                    $36,$0A,$21,$19,$18,$19,$18      ;17; Red Maze #1                              Red            
 LFEF3:  .byte <RedMazeTop,>RedMazeTop,                $36,$0A,$21,$1A,$17,$1A,$17      ;18; Top of Red Maze                        Red              
 LFEFC:  .byte <RedMazeBottom,>RedMazeBottom,          $36,$0A,$21,$17,$1A,$17,$1A      ;19; Bottom of Red Maze                        Red           

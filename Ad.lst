@@ -2515,223 +2515,241 @@
    2514  fd90		       01 1f 01 80	      .byte.b	$01,$1F,$01,$80	; T
    2515  fd94		       17 15 1d 80	      .byte.b	$17,$15,$1D,$80	; S
    2516  fd98		       04 1f 11 80	      .byte.b	$04,$1F,$11,$80	; {
-   2517  fd9c		       1c 10 0f 80	      .byte.b	$1C,$10,$0F,$80	; J
-   2518  fda0		       06 09 0f 80	      .byte.b	$06,$09,$0F,$80	; a
-   2519  fda4		       0f 01 01 80	      .byte.b	$0F,$01,$01,$80	; r
-   2520  fda8		       0e 15 16 80	      .byte.b	$0E,$15,$16,$80	; e
-   2521  fdac		       0c 16 1f 80	      .byte.b	$0C,$16,$1F,$80	; d
-   2522  fdb0		       10 10 10 80	      .byte.b	$10,$10,$10,$80	; _
-   2523  fdb4		       0e 11 11 80	      .byte.b	$0E,$11,$11,$80	; C
-   2524  fdb8		       06 09 0f 80	      .byte.b	$06,$09,$0F,$80	; a
-   2525  fdbc		       0f 02 0f 80	      .byte.b	$0F,$02,$0F,$80	; m
-   2526  fdc0		       1f 05 02 80	      .byte.b	$1F,$05,$02,$80	; p
-   2527  fdc4		       1f 16 0c 80	      .byte.b	$1F,$16,$0C,$80	; b
-   2528  fdc8		       0e 15 16 80	      .byte.b	$0E,$15,$16,$80	; e
-   2529  fdcc		       1f 10 10 80	      .byte.b	$1F,$10,$10,$80	; l
-   2530  fdd0		       1f 10 10 80	      .byte.b	$1F,$10,$10,$80	; l
-   2531  fdd4		       11 1f 04 80	      .byte.b	$11,$1F,$04,$80	; }
-   2532  fdd8		       80		      .byte.b	$80
-   2533  fdd9		       80		      .byte.b	$80
-   2534  fdda		       80		      .byte.b	$80
-   2535  fddb		       80		      .byte.b	$80
-   2536  fddc		       80		      .byte.b	$80
-   2537  fddd		       80		      .byte.b	$80
-   2538  fdde		       80		      .byte.b	$80
-   2539  fddf		       80		      .byte.b	$80
-   2540  fde0		       80		      .byte.b	$80
-   2541  fde1		       80		      .byte.b	$80
-   2542  fde2		       80		      .byte.b	$80
-   2543  fde3		       80		      .byte.b	$80
-   2544  fde4		       80		      .byte.b	$80
-   2545  fde5		       80		      .byte.b	$80
-   2546  fde6		       80		      .byte.b	$80
-   2547  fde7		       00		      .byte.b	$00
-   2548  fde8
-   2549  fde8							;Object $4 : Author's Name   
-   2550  fde8				   AuthorInfo
-   2551  fde8		       1e 50 69 	      .byte.b	$1E,$50,$69	;Room 1E, (50, 69)								
-   2552  fdeb
-   2553  fdeb							;Object #4 : Current State  
-   2554  fdeb				   AuthorCurr
-   2555  fdeb		       00		      .byte.b	$00
-   2556  fdec
-   2557  fdec							;Object #4 : States												    
-   2558  fdec				   AuthorStates
-   2559  fdec		       ff 88 fd 	      .byte.b	$FF,<GfxAuthor,>GfxAuthor	;State FF at &FD88								
-   2560  fdef
-   2561  fdef							;Object #10 : State												    
-   2562  fdef				   ChalliseCurr
-   2563  fdef		       00		      .byte.b	$00
-   2564  fdf0
-   2565  fdf0							;Object #10 : List of States											    
-   2566  fdf0				   ChalliseStates
-   2567  fdf0		       ff f3 fd 	      .byte.b	$FF,<GfxChallise,>GfxChallise	;State FF at &FDF3							       
-   2568  fdf3
-   2569  fdf3							;Object #10 : State FF : Graphic										    
-   2570  fdf3				   GfxChallise
-   2571  fdf3		       81		      .byte.b	$81	;X	 X								    
-   2572  fdf4		       81		      .byte.b	$81	;X	 X								    
-   2573  fdf5		       c3		      .byte.b	$C3	;XX	XX								    
-   2574  fdf6		       7e		      .byte.b	$7E	; XXXXXX								    
-   2575  fdf7		       7e		      .byte.b	$7E	; XXXXXX								   
-   2576  fdf8		       3c		      .byte.b	$3C	;  XXXX								    
-   2577  fdf9		       18		      .byte.b	$18	;   XX 								    
-   2578  fdfa		       18		      .byte.b	$18	;   XX 								    
-   2579  fdfb		       7e		      .byte.b	$7E	; XXXXXX								    
-   2580  fdfc		       00		      .byte.b	$00
-   2581  fdfd
-   2582  fdfd							;Object #12 : State												    
-   2583  fdfd				   NullCurr
-   2584  fdfd		       00		      .byte.b	$00
-   2585  fdfe
-   2586  fdfe							;Object #12 : List of States											    
-   2587  fdfe				   NullStates
-   2588  fdfe		       ff 01 fe 	      .byte.b	$FF,<GfxNull,>GfxNull
-   2589  fe01
-   2590  fe01							;Object #12 " State FF : Graphic										    
-   2591  fe01				   GfxNull
-   2592  fe01		       00		      .byte.b	$00
-   2593  fe02
-   2594  fe02							;Object #5 Number.	
-   2595  fe02				   NumberInfo
-   2596  fe02		       00 50 40 	      .byte.b	$00,$50,$40	;#5 Number: Room 00, (50,40)						       
-   2597  fe05
-   2598  fe05							;Object #5 States.												    
-   2599  fe05				   NumberStates
-   2600  fe05		       01 f4 fc 	      .byte.b	$01,<GfxNum1,>GfxNum1	;State 1 as FCF4								
-   2601  fe08		       03 04 fd    LFE08      .byte.b	$03,<GfxNum2,>GfxNum2	;State 3 as FD04								
-   2602  fe0b		       ff 0c fd    LFE0B      .byte.b	$FF,<GfxNum3,>GfxNum3	;State FF as FD0C								
-   2603  fe0e
-   2604  fe0e							;Object #11 : State												    
-   2605  fe0e				   MagnetCurr
-   2606  fe0e		       00		      .byte.b	$00
-   2607  fe0f
-   2608  fe0f							;Object #11 : List of States											    
-   2609  fe0f				   MagnetStates
-   2610  fe0f		       ff 12 fe 	      .byte.b	$FF,<GfxMagnet,>GfxMagnet	;State FF at FE12								
-   2611  fe12
-   2612  fe12							;Object #11 : State FF : Graphic										    
-   2613  fe12				   GfxMagnet
-   2614  fe12		       3c		      .byte.b	$3C	;  XXXX								    
-   2615  fe13		       7e		      .byte.b	$7E	; XXXXXX								    
-   2616  fe14		       e7		      .byte.b	$E7	;XXX  XXX								    
-   2617  fe15		       c3		      .byte.b	$C3	;XX	XX								    
-   2618  fe16		       c3		      .byte.b	$C3	;XX	XX								    
-   2619  fe17		       c3		      .byte.b	$C3	;XX	XX								    
-   2620  fe18		       c3		      .byte.b	$C3	;XX	XX								    
-   2621  fe19		       c3		      .byte.b	$C3	;XX	XX								    
-   2622  fe1a		       00		      .byte.b	$00
-   2623  fe1b
-   2624  fe1b
-   2625  fe1b							;Room Data													    
-   2626  fe1b							;Offset 0 : Low byte foom graphics data.									    
-   2627  fe1b							;Offset 1 : High byte room graphics data									    
-   2628  fe1b							;Offset 2 : Color												    
-   2629  fe1b							;Offset 3 : B&W Color												    
-   2630  fe1b							;Offset 4 : Bits 5-0 : Playfield Control									    
-   2631  fe1b							;	      Bit 6 : True if right thin wall wanted.								    
-   2632  fe1b							;	      Bit 7 : True if left thin wall wanted.								    
-   2633  fe1b							;Offset 5 : Room Above 											    
-   2634  fe1b							;Offset 6 : Room Left												    
-   2635  fe1b							;Offset 7 : Room Down												    
-   2636  fe1b							;Offset 8 : Room Right 											    
-   2637  fe1b
-   2638  fe1b				   RoomDataTable
-   2639  fe1b		       dc fa 66 0a*LFE1B      .byte.b	<NumberRoom,>NumberRoom, $66,$0A,$21,$00,$00,$00,$00	;00; 'Number Room.			     Purple	      
-   2640  fe24		       b2 fa d8 0a*LFE24      .byte.b	<BelowYellowCastle,>BelowYellowCastle, $D8,$0A,$A1,$08,$02,$80,$03	;01; (Top Acess) Reflected/8 Clock Ball		      
-   2641  fe2d		       b2 fa c8 0a*LFE2D      .byte.b	<BelowYellowCastle,>BelowYellowCastle, $C8,$0A,$21,$11,$03,$83,$01	;02; (Top Access)			   Green	      
-   2642  fe36		       a0 fa e8 0a*LFE36      .byte.b	<LeftOfName,>LeftOfName, $E8,$0A,$61,$06,$01,$86,$02	;03; Left of Name					      
-   2643  fe3f		       3e fb 86 0a*LFE3F      .byte.b	<BlueMazeTop,>BlueMazeTop, $86,$0A,$21,$10,$05,$07,$06	;04; Top of Blue Maze			       Blue	      
-   2644  fe48		       53 fb 86 0a*LFE48      .byte.b	<BlueMaze1,>BlueMaze1, $86,$0A,$21,$1D,$06,$08,$04	;05; Blue Maze #1				  Blue	      
-   2645  fe51		       68 fb 86 0a*LFE51      .byte.b	<BlueMazeBottom,>BlueMazeBottom, $86,$0A,$21,$07,$04,$03,$05	;06; Bottom of Blue Maze		   Blue 	      
-   2646  fe5a		       7d fb 86 0a*LFE5A      .byte.b	<BlueMazeCenter,>BlueMazeCenter, $86,$0A,$21,$04,$08,$06,$08	;07; Center of Blue Maze		   Blue 	      
-   2647  fe63		       92 fb 86 0a*LFE63      .byte.b	<BlueMazeEntry,>BlueMazeEntry, $86,$0A,$21,$05,$07,$01,$07	;08; Blue Maze Entry			     Blue	      
-   2648  fe6c		       a7 fb 08 08*LFE6C      .byte.b	<MazeMiddle,>MazeMiddle, $08,$08,$25,$0A,$0A,$0B,$0A	;09; Maze Middle				Invisible     
-   2649  fe75		       ce fb 08 08*LFE75      .byte.b	<MazeEntry,>MazeEntry, $08,$08,$25,$03,$09,$09,$09	;0A; Maze Entry			      Invisible       
-   2650  fe7e		       b9 fb 08 08*LFE7E      .byte.b	<MazeSide,>MazeSide, $08,$08,$25,$09,$0C,$1C,$0D	;0B; Maze Side 			     Invisible	    Re
-   2651  fe87		       c7 fa 98 0a*LFE87      .byte.b	<SideCorridor,>SideCorridor, $98,$0A,$61,$1C,$0D,$1D,$0B	;0C; (Side Corridor)					      
-   2652  fe90		       c7 fa b8 0a*LFE90      .byte.b	<SideCorridor,>SideCorridor, $B8,$0A,$A1,$0F,$0B,$0E,$0C	;0D; (Side Corridor)					      
-   2653  fe99		       74 fc a8 0a*LFE99      .byte.b	<TopEntryRoom,>TopEntryRoom, $A8,$0A,$21,$0D,$10,$0F,$10	;0E; (Top Entry Room)					      
-   2654  fea2		       e3 fb 0c 0c*LFEA2      .byte.b	<CastleDef,>CastleDef, $0C,$0C,$21,$0E,$0F,$0D,$0F	;0F; White Castle				White	      
-   2655  feab		       e3 fb 00 02*LFEAB      .byte.b	<CastleDef,>CastleDef, $00,$02,$21,$01,$1C,$04,$1C	;10; Black Castle				Black	      
-   2656  feb4		       e3 fb 1a 0a*LFEB4      .byte.b	<CastleDef,>CastleDef, $1A,$0A,$21,$06,$03,$02,$01	;11; Yellow Castle			   Yellow	      
-   2657  febd		       dc fa 1a 0a*LFEBD      .byte.b	<NumberRoom,>NumberRoom, $1A,$0A,$21,$12,$12,$12,$12	;12; Yellow Castle Entry		    Yellow	      
-   2658  fec6		       89 fc 08 08*LFEC6      .byte.b	<BlackMaze1,>BlackMaze1, $08,$08,$25,$15,$14,$15,$16	;13; Black Maze #1			     Invisible	    Re
-   2659  fecf		       b0 fc 08 08*LFECF      .byte.b	<BlackMaze2,>BlackMaze2, $08,$08,$24,$16,$15,$16,$13	;14; Black Maze #2			   Invisible	  Dupl
-   2660  fed8		       9b fc 08 08*LFED8      .byte.b	<BlackMaze3,>BlackMaze3, $08,$08,$24,$13,$16,$13,$14	;15; Black Maze #3			   Invisible	  Dupl
-   2661  fee1		       c2 fc 08 08*LFEE1      .byte.b	<BlackMazeEntry,>BlackMazeEntry, $08,$08,$25,$14,$13,$1B,$15	;16; Black Maze Entry			      Invisible      R
-   2662  feea		       26 fc 36 0a*LFEEA      .byte.b	<RedMaze1,>RedMaze1, $36,$0A,$21,$19,$18,$19,$18	;17; Red Maze #1			       Red	      
-   2663  fef3		       4d fc 36 0a*LFEF3      .byte.b	<RedMazeTop,>RedMazeTop, $36,$0A,$21,$1A,$17,$1A,$17	;18; Top of Red Maze			     Red	      
-   2664  fefc		       38 fc 36 0a*LFEFC      .byte.b	<RedMazeBottom,>RedMazeBottom, $36,$0A,$21,$17,$1A,$17,$1A	;19; Bottom of Red Maze			Red	      
-   2665  ff05		       5f fc 36 0a*LFF05      .byte.b	<WhiteCastleEntry,>WhiteCastleEntry, $36,$0A,$21,$18,$19,$18,$19	;1A; White Castle Entry			Red	      
-   2666  ff0e		       29 fb 36 0a*LFF0E      .byte.b	<TwoExitRoom,>TwoExitRoom, $36,$0A,$21,$89,$89,$89,$89	;1B; Black Castle Entry			Red	      
-   2667  ff17		       dc fa 66 0a*LFF17      .byte.b	<NumberRoom,>NumberRoom, $66,$0A,$21,$1D,$07,$8C,$08	;1C; Other Purple Room 			Purple	      
-   2668  ff20		       74 fc 36 0a*LFF20      .byte.b	<TopEntryRoom,>TopEntryRoom, $36,$0A,$21,$8F,$01,$10,$03	;1D; (Top Entry Room)			      Red	      
-   2669  ff29		       b2 fa 66 0a*LFF29      .byte.b	<BelowYellowCastle,>BelowYellowCastle, $66,$0A,$21,$06,$01,$06,$03	;1E; Name Room 			     Purple	      
-   2670  ff32
-   2671  ff32
-   2672  ff32							;Room differences for different levels (level 1,2,3)  
-   2673  ff32				   RoomDiffs
-   2674  ff32		       10 0f 0f    LFF32      .byte.b	$10,$0F,$0F	;Down from Room 01								
-   2675  ff35		       05 11 11    LFF35      .byte.b	$05,$11,$11	;Down from Room 02								
-   2676  ff38		       1d 0a 0a    LFF38      .byte.b	$1D,$0A,$0A	;Down from Room 03								
-   2677  ff3b		       1c 16 16    LFF3B      .byte.b	$1C,$16,$16	;U/L/R/D from Room 1B (Black Castle Room)					
-   2678  ff3e		       1b 0c 0c    LFF3E      .byte.b	$1B,$0C,$0C	;Down from Room 1C								
-   2679  ff41		       03 0c 0c    LFF41      .byte.b	$03,$0C,$0C	;Up from Room 1D (Top Entry Room)						
-   2680  ff44
-   2681  ff44							;Objects													    
-   2682  ff44							;Offset 0 : Low byte object information (moveable stuff)							    
-   2683  ff44							;Offset 1 : High byte object information (moveable stuff)							    
-   2684  ff44							;Offset 2 : Low byte to object's current state 								    
-   2685  ff44							;Offset 3 : High byte to object's current state								    
-   2686  ff44							;Offset 4 : Low byte list of states										    
-   2687  ff44							;Offset 5 : High byte list of states										    
-   2688  ff44							;Offset 6 : Colour												    
-   2689  ff44							;Offset 7 : Colour in B&W.											    
-   2690  ff44							;Offset 8 : Size of object											    
-   2691  ff44
-   2692  ff44				   Store1
-   2693  ff44		       d9		      .byte.b	$D9	;0	 ;#0 Invisible Surround Offsets..      00			    
-   2694  ff45				   Store2
-   2695  ff45		       00		      .byte.b	$00	;1									    
-   2696  ff46				   Store3
-   2697  ff46		       01		      .byte.b	<SurroundCurr	;2									    
-   2698  ff47				   Store4
-   2699  ff47		       fc		      .byte.b	>SurroundCurr	;3									    
-   2700  ff48				   Store5
-   2701  ff48		       02		      .byte.b	<SurroundStates	;4									    
-   2702  ff49				   Store6
-   2703  ff49		       fc		      .byte.b	>SurroundStates	;5									    
-   2704  ff4a				   Store7
-   2705  ff4a		       28		      .byte.b	$28	;6									    
-   2706  ff4b				   Store8
-   2707  ff4b		       0c		      .byte.b	$0C	;7									    
-   2708  ff4c				   Store9
-   2709  ff4c		       07		      .byte.b	$07	;8									    
-   2710  ff4d
-   2711  ff4d		       f8 fb c8 00*LFF4D      .byte.b	<PortInfo1,>PortInfo1, $C8,$00, <PortStates,>PortStates, $00,$00,$00	;#1 Portcullis #1	 Black		  09		      
-   2712  ff56		       fb fb c9 00*LFF56      .byte.b	<PortInfo2,>PortInfo2, $C9,$00, <PortStates,>PortStates, $00,$00,$00	;#2 Portcullis #2	 Black		  12		 
-   2713  ff5f		       fe fb ca 00*LFF5F      .byte.b	<PortInfo3,>PortInfo3, $CA,$00, <PortStates,>PortStates, $00,$00,$00	;#3 Portcullis #3	 Black		  1B		 
-   2714  ff68		       e8 fd eb fd*LFF68      .byte.b	<AuthorInfo,>AuthorInfo, <AuthorCurr,>AuthorCurr, <AuthorStates,>AuthorStates, $0E,$0E,$00	;#4 Name		 White		  24
-   2715  ff71		       02 fe dd 00*LFF71      .byte.b	<NumberInfo,>NumberInfo, $DD,$00, <NumberStates,>NumberStates, $C8,$00,$00	;#5 Number		 Green		  2D		  
-   2716  ff7a		       a4 00 a8 00*LFF7A      .byte.b	$A4,$00, $A8,$00, <DragonStates,>DragonStates, $36,$0E,$00	;#6 Dragon #1		 Red		  36		       
-   2717  ff83		       a9 00 ad 00*LFF83      .byte.b	$A9,$00, $AD,$00, <DragonStates,>DragonStates, $1A,$06,$00	;#7 Dragon #2		 Yellow 	  3F			  
-   2718  ff8c		       ae 00 b2 00*LFF8C      .byte.b	$AE,$00, $B2,$00, <DragonStates,>DragonStates, $C8,$00,$00	;#8 Dragon #3		 Green		  48		     
-   2719  ff95		       b6 00 78 fd*LFF95      .byte.b	$B6,$00, <SwordCurr,>SwordCurr, <SwordStates,>SwordStates, $1A,$06,$00	;#9 Sword		 Yellow 	  51			
-   2720  ff9e		       bc 00 d7 fc*LFF9E      .byte.b	$BC,$00, <BridgeCurr,>BridgeCurr, <BridgeStates,>BridgeStates, $66,$02,$07	;#0A Bridge		 Purple 	  5A		      
-   2721  ffa7		       bf 00 fc fc*LFFA7      .byte.b	$BF,$00, <KeyCurr,>KeyCurr, <KeyStates,>KeyStates, $1A,$06,$00	;#0B Key #01		 Yellow 	  63			   
-   2722  ffb0		       c2 00 fc fc*LFFB0      .byte.b	$C2,$00, <KeyCurr,>KeyCurr, <KeyStates,>KeyStates, $0E,$0E,$00	;#0C Key #02		 White		  6C		      
-   2723  ffb9		       c5 00 fc fc*LFFB9      .byte.b	$C5,$00, <KeyCurr,>KeyCurr, <KeyStates,>KeyStates, $00,$00,$00	;#0D Key #03		 Black		  75		      
-   2724  ffc2		       cb 00 cf 00*LFFC2      .byte.b	$CB,$00, $CF,$00, <BatStates,>BatStates, $00,$00,$00	;#0E Bat		 Black		  7E		    
-   2725  ffcb		       a1 00 82 fd*LFFCB      .byte.b	$A1,$00, <DotCurr,>DotCurr, <DotStates,>DotStates, $08,$08,$00	;#0F Black Dot 	 Light Gray	  87		     
-   2726  ffd4		       b9 00 ef fd*LFFD4      .byte.b	$B9,$00, <ChalliseCurr,>ChalliseCurr, <ChalliseStates,>ChalliseStates, $CB,$06,$00	;#10 Challise		 Flash		  90		     
-   2727  ffdd		       b3 00 0e fe*LFFDD      .byte.b	$B3,$00, <MagnetCurr,>MagnetCurr, <MagnetStates,>MagnetStates, $00,$06,$00	;#11 Magnet		 Black		  99		 
-   2728  ffe6		       bc 00 fd fd*LFFE6      .byte.b	$BC,$00, <NullCurr,>NullCurr, <NullStates,>NullStates, $00,$00,$00	;#12 Null		 Black		  A2		   
-   2729  ffef
-   2730  ffef							;Not Used													    
-   2731  ffef		       00 00 00 00*LFFEF      .byte.b	$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
-   2732  fffa
-   2733  fffa							;6502 Vectors (Not Used??											    
-   2734  fffa		       00 f0	   LFFFA      .byte.b	$00,$F0
-   2735  fffc		       00 f0	   LFFFC      .byte.b	$00,$F0
-   2736  fffe		       00 f0	   LFFFE      .byte.b	$00,$F0
+   2517  fd9c		       1f 05 01 80	      .byte.b	$1F,$05,$01,$80	; F
+   2518  fda0		       1f 10 10 80	      .byte.b	$1F,$10,$10,$80	; L
+   2519  fda4		       1e 05 1e 80	      .byte.b	$1E,$05,$1E,$80	; A
+   2520  fda8		       0e 11 1d 80	      .byte.b	$0E,$11,$1D,$80	; G
+   2521  fdac		       1f 05 1a 80	      .byte.b	$1F,$05,$1A,$80	; R
+   2522  fdb0		       0e 11 0e 80	      .byte.b	$0E,$11,$0E,$80	; O
+   2523  fdb4		       0e 11 0e 80	      .byte.b	$0E,$11,$0E,$80	; O
+   2524  fdb8		       1f 02 1f 80	      .byte.b	$1F,$02,$1F,$80	; M
+   2525  fdbc		       11 1f 04 80	      .byte.b	$11,$1F,$04,$80	; }
+   2526  fdc0		       80		      .byte.b	$80
+   2527  fdc1		       80		      .byte.b	$80
+   2528  fdc2		       80		      .byte.b	$80
+   2529  fdc3		       80		      .byte.b	$80
+   2530  fdc4		       80		      .byte.b	$80
+   2531  fdc5		       80		      .byte.b	$80
+   2532  fdc6		       80		      .byte.b	$80
+   2533  fdc7		       80		      .byte.b	$80
+   2534  fdc8		       80		      .byte.b	$80
+   2535  fdc9		       80		      .byte.b	$80
+   2536  fdca		       80		      .byte.b	$80
+   2537  fdcb		       80		      .byte.b	$80
+   2538  fdcc		       80		      .byte.b	$80
+   2539  fdcd		       80		      .byte.b	$80
+   2540  fdce		       80		      .byte.b	$80
+   2541  fdcf		       80		      .byte.b	$80
+   2542  fdd0		       80		      .byte.b	$80
+   2543  fdd1		       80		      .byte.b	$80
+   2544  fdd2		       80		      .byte.b	$80
+   2545  fdd3		       80		      .byte.b	$80
+   2546  fdd4		       80		      .byte.b	$80
+   2547  fdd5		       80		      .byte.b	$80
+   2548  fdd6		       80		      .byte.b	$80
+   2549  fdd7		       80		      .byte.b	$80
+   2550  fdd8		       80		      .byte.b	$80
+   2551  fdd9		       80		      .byte.b	$80
+   2552  fdda		       80		      .byte.b	$80
+   2553  fddb		       80		      .byte.b	$80
+   2554  fddc		       80		      .byte.b	$80
+   2555  fddd		       80		      .byte.b	$80
+   2556  fdde		       80		      .byte.b	$80
+   2557  fddf		       80		      .byte.b	$80
+   2558  fde0		       80		      .byte.b	$80
+   2559  fde1		       80		      .byte.b	$80
+   2560  fde2		       80		      .byte.b	$80
+   2561  fde3		       80		      .byte.b	$80
+   2562  fde4		       80		      .byte.b	$80
+   2563  fde5		       80		      .byte.b	$80
+   2564  fde6		       80		      .byte.b	$80
+   2565  fde7		       00		      .byte.b	$00
+   2566  fde8
+   2567  fde8							;Object $4 : Author's Name   
+   2568  fde8				   AuthorInfo
+   2569  fde8		       1e 50 69 	      .byte.b	$1E,$50,$69	;Room 1E, (50, 69)								
+   2570  fdeb
+   2571  fdeb							;Object #4 : Current State  
+   2572  fdeb				   AuthorCurr
+   2573  fdeb		       00		      .byte.b	$00
+   2574  fdec
+   2575  fdec							;Object #4 : States												    
+   2576  fdec				   AuthorStates
+   2577  fdec		       ff 88 fd 	      .byte.b	$FF,<GfxAuthor,>GfxAuthor	;State FF at &FD88								
+   2578  fdef
+   2579  fdef							;Object #10 : State												    
+   2580  fdef				   ChalliseCurr
+   2581  fdef		       00		      .byte.b	$00
+   2582  fdf0
+   2583  fdf0							;Object #10 : List of States											    
+   2584  fdf0				   ChalliseStates
+   2585  fdf0		       ff f3 fd 	      .byte.b	$FF,<GfxChallise,>GfxChallise	;State FF at &FDF3							       
+   2586  fdf3
+   2587  fdf3							;Object #10 : State FF : Graphic										    
+   2588  fdf3				   GfxChallise
+   2589  fdf3		       81		      .byte.b	$81	;X	 X								    
+   2590  fdf4		       81		      .byte.b	$81	;X	 X								    
+   2591  fdf5		       c3		      .byte.b	$C3	;XX	XX								    
+   2592  fdf6		       7e		      .byte.b	$7E	; XXXXXX								    
+   2593  fdf7		       7e		      .byte.b	$7E	; XXXXXX								   
+   2594  fdf8		       3c		      .byte.b	$3C	;  XXXX								    
+   2595  fdf9		       18		      .byte.b	$18	;   XX 								    
+   2596  fdfa		       18		      .byte.b	$18	;   XX 								    
+   2597  fdfb		       7e		      .byte.b	$7E	; XXXXXX								    
+   2598  fdfc		       00		      .byte.b	$00
+   2599  fdfd
+   2600  fdfd							;Object #12 : State												    
+   2601  fdfd				   NullCurr
+   2602  fdfd		       00		      .byte.b	$00
+   2603  fdfe
+   2604  fdfe							;Object #12 : List of States											    
+   2605  fdfe				   NullStates
+   2606  fdfe		       ff 01 fe 	      .byte.b	$FF,<GfxNull,>GfxNull
+   2607  fe01
+   2608  fe01							;Object #12 " State FF : Graphic										    
+   2609  fe01				   GfxNull
+   2610  fe01		       00		      .byte.b	$00
+   2611  fe02
+   2612  fe02							;Object #5 Number.	
+   2613  fe02				   NumberInfo
+   2614  fe02		       00 50 40 	      .byte.b	$00,$50,$40	;#5 Number: Room 00, (50,40)						       
+   2615  fe05
+   2616  fe05							;Object #5 States.												    
+   2617  fe05				   NumberStates
+   2618  fe05		       01 f4 fc 	      .byte.b	$01,<GfxNum1,>GfxNum1	;State 1 as FCF4								
+   2619  fe08		       03 04 fd    LFE08      .byte.b	$03,<GfxNum2,>GfxNum2	;State 3 as FD04								
+   2620  fe0b		       ff 0c fd    LFE0B      .byte.b	$FF,<GfxNum3,>GfxNum3	;State FF as FD0C								
+   2621  fe0e
+   2622  fe0e							;Object #11 : State												    
+   2623  fe0e				   MagnetCurr
+   2624  fe0e		       00		      .byte.b	$00
+   2625  fe0f
+   2626  fe0f							;Object #11 : List of States											    
+   2627  fe0f				   MagnetStates
+   2628  fe0f		       ff 12 fe 	      .byte.b	$FF,<GfxMagnet,>GfxMagnet	;State FF at FE12								
+   2629  fe12
+   2630  fe12							;Object #11 : State FF : Graphic										    
+   2631  fe12				   GfxMagnet
+   2632  fe12		       3c		      .byte.b	$3C	;  XXXX								    
+   2633  fe13		       7e		      .byte.b	$7E	; XXXXXX								    
+   2634  fe14		       e7		      .byte.b	$E7	;XXX  XXX								    
+   2635  fe15		       c3		      .byte.b	$C3	;XX	XX								    
+   2636  fe16		       c3		      .byte.b	$C3	;XX	XX								    
+   2637  fe17		       c3		      .byte.b	$C3	;XX	XX								    
+   2638  fe18		       c3		      .byte.b	$C3	;XX	XX								    
+   2639  fe19		       c3		      .byte.b	$C3	;XX	XX								    
+   2640  fe1a		       00		      .byte.b	$00
+   2641  fe1b
+   2642  fe1b
+   2643  fe1b							;Room Data													    
+   2644  fe1b							;Offset 0 : Low byte foom graphics data.									    
+   2645  fe1b							;Offset 1 : High byte room graphics data									    
+   2646  fe1b							;Offset 2 : Color												    
+   2647  fe1b							;Offset 3 : B&W Color												    
+   2648  fe1b							;Offset 4 : Bits 5-0 : Playfield Control									    
+   2649  fe1b							;	      Bit 6 : True if right thin wall wanted.								    
+   2650  fe1b							;	      Bit 7 : True if left thin wall wanted.								    
+   2651  fe1b							;Offset 5 : Room Above 											    
+   2652  fe1b							;Offset 6 : Room Left												    
+   2653  fe1b							;Offset 7 : Room Down												    
+   2654  fe1b							;Offset 8 : Room Right 											    
+   2655  fe1b
+   2656  fe1b				   RoomDataTable
+   2657  fe1b		       dc fa 66 0a*LFE1B      .byte.b	<NumberRoom,>NumberRoom, $66,$0A,$21,$00,$00,$00,$00	;00; 'Number Room.			     Purple	      
+   2658  fe24		       b2 fa d8 0a*LFE24      .byte.b	<BelowYellowCastle,>BelowYellowCastle, $D8,$0A,$A1,$08,$02,$80,$03	;01; (Top Acess) Reflected/8 Clock Ball		      
+   2659  fe2d		       b2 fa c8 0a*LFE2D      .byte.b	<BelowYellowCastle,>BelowYellowCastle, $C8,$0A,$21,$11,$03,$83,$01	;02; (Top Access)			   Green	      
+   2660  fe36		       a0 fa e8 0a*LFE36      .byte.b	<LeftOfName,>LeftOfName, $E8,$0A,$61,$06,$01,$86,$02	;03; Left of Name					      
+   2661  fe3f		       3e fb 86 0a*LFE3F      .byte.b	<BlueMazeTop,>BlueMazeTop, $86,$0A,$21,$10,$05,$07,$06	;04; Top of Blue Maze			       Blue	      
+   2662  fe48		       53 fb 86 0a*LFE48      .byte.b	<BlueMaze1,>BlueMaze1, $86,$0A,$21,$1D,$06,$08,$04	;05; Blue Maze #1				  Blue	      
+   2663  fe51		       68 fb 86 0a*LFE51      .byte.b	<BlueMazeBottom,>BlueMazeBottom, $86,$0A,$21,$07,$04,$03,$05	;06; Bottom of Blue Maze		   Blue 	      
+   2664  fe5a		       7d fb 86 0a*LFE5A      .byte.b	<BlueMazeCenter,>BlueMazeCenter, $86,$0A,$21,$04,$08,$06,$08	;07; Center of Blue Maze		   Blue 	      
+   2665  fe63		       92 fb 86 0a*LFE63      .byte.b	<BlueMazeEntry,>BlueMazeEntry, $86,$0A,$21,$05,$07,$01,$07	;08; Blue Maze Entry			     Blue	      
+   2666  fe6c		       a7 fb 08 08*LFE6C      .byte.b	<MazeMiddle,>MazeMiddle, $08,$08,$25,$0A,$0A,$0B,$0A	;09; Maze Middle				Invisible     
+   2667  fe75		       ce fb 08 08*LFE75      .byte.b	<MazeEntry,>MazeEntry, $08,$08,$25,$03,$09,$09,$09	;0A; Maze Entry			      Invisible       
+   2668  fe7e		       b9 fb 08 08*LFE7E      .byte.b	<MazeSide,>MazeSide, $08,$08,$25,$09,$0C,$1C,$0D	;0B; Maze Side 			     Invisible	    Re
+   2669  fe87		       c7 fa 98 0a*LFE87      .byte.b	<SideCorridor,>SideCorridor, $98,$0A,$61,$1C,$0D,$1D,$0B	;0C; (Side Corridor)					      
+   2670  fe90		       c7 fa b8 0a*LFE90      .byte.b	<SideCorridor,>SideCorridor, $B8,$0A,$A1,$0F,$0B,$0E,$0C	;0D; (Side Corridor)					      
+   2671  fe99		       74 fc a8 0a*LFE99      .byte.b	<TopEntryRoom,>TopEntryRoom, $A8,$0A,$21,$0D,$10,$0F,$10	;0E; (Top Entry Room)					      
+   2672  fea2		       e3 fb 0c 0c*LFEA2      .byte.b	<CastleDef,>CastleDef, $0C,$0C,$21,$0E,$0F,$0D,$0F	;0F; White Castle				White	      
+   2673  feab		       e3 fb 00 02*LFEAB      .byte.b	<CastleDef,>CastleDef, $00,$02,$21,$01,$1C,$04,$1C	;10; Black Castle				Black	      
+   2674  feb4		       e3 fb 1a 0a*LFEB4      .byte.b	<CastleDef,>CastleDef, $1A,$0A,$21,$06,$03,$02,$01	;11; Yellow Castle			   Yellow	      
+   2675  febd		       dc fa 1a 0a*LFEBD      .byte.b	<NumberRoom,>NumberRoom, $1A,$0A,$21,$12,$12,$12,$12	;12; Yellow Castle Entry		    Yellow	      
+   2676  fec6		       89 fc 08 08*LFEC6      .byte.b	<BlackMaze1,>BlackMaze1, $08,$08,$25,$15,$14,$15,$16	;13; Black Maze #1			     Invisible	    Re
+   2677  fecf		       b0 fc 08 08*LFECF      .byte.b	<BlackMaze2,>BlackMaze2, $08,$08,$24,$16,$15,$16,$13	;14; Black Maze #2			   Invisible	  Dupl
+   2678  fed8		       9b fc 08 08*LFED8      .byte.b	<BlackMaze3,>BlackMaze3, $08,$08,$24,$13,$16,$13,$14	;15; Black Maze #3			   Invisible	  Dupl
+   2679  fee1		       c2 fc 08 08*LFEE1      .byte.b	<BlackMazeEntry,>BlackMazeEntry, $08,$08,$25,$14,$13,$1B,$15	;16; Black Maze Entry			      Invisible      R
+   2680  feea		       26 fc 36 0a*LFEEA      .byte.b	<RedMaze1,>RedMaze1, $36,$0A,$21,$19,$18,$19,$18	;17; Red Maze #1			       Red	      
+   2681  fef3		       4d fc 36 0a*LFEF3      .byte.b	<RedMazeTop,>RedMazeTop, $36,$0A,$21,$1A,$17,$1A,$17	;18; Top of Red Maze			     Red	      
+   2682  fefc		       38 fc 36 0a*LFEFC      .byte.b	<RedMazeBottom,>RedMazeBottom, $36,$0A,$21,$17,$1A,$17,$1A	;19; Bottom of Red Maze			Red	      
+   2683  ff05		       5f fc 36 0a*LFF05      .byte.b	<WhiteCastleEntry,>WhiteCastleEntry, $36,$0A,$21,$18,$19,$18,$19	;1A; White Castle Entry			Red	      
+   2684  ff0e		       29 fb 36 0a*LFF0E      .byte.b	<TwoExitRoom,>TwoExitRoom, $36,$0A,$21,$89,$89,$89,$89	;1B; Black Castle Entry			Red	      
+   2685  ff17		       dc fa 66 0a*LFF17      .byte.b	<NumberRoom,>NumberRoom, $66,$0A,$21,$1D,$07,$8C,$08	;1C; Other Purple Room 			Purple	      
+   2686  ff20		       74 fc 36 0a*LFF20      .byte.b	<TopEntryRoom,>TopEntryRoom, $36,$0A,$21,$8F,$01,$10,$03	;1D; (Top Entry Room)			      Red	      
+   2687  ff29		       b2 fa 66 0a*LFF29      .byte.b	<BelowYellowCastle,>BelowYellowCastle, $66,$0A,$21,$06,$01,$06,$03	;1E; Name Room 			     Purple	      
+   2688  ff32
+   2689  ff32
+   2690  ff32							;Room differences for different levels (level 1,2,3)  
+   2691  ff32				   RoomDiffs
+   2692  ff32		       10 0f 0f    LFF32      .byte.b	$10,$0F,$0F	;Down from Room 01								
+   2693  ff35		       05 11 11    LFF35      .byte.b	$05,$11,$11	;Down from Room 02								
+   2694  ff38		       1d 0a 0a    LFF38      .byte.b	$1D,$0A,$0A	;Down from Room 03								
+   2695  ff3b		       1c 16 16    LFF3B      .byte.b	$1C,$16,$16	;U/L/R/D from Room 1B (Black Castle Room)					
+   2696  ff3e		       1b 0c 0c    LFF3E      .byte.b	$1B,$0C,$0C	;Down from Room 1C								
+   2697  ff41		       03 0c 0c    LFF41      .byte.b	$03,$0C,$0C	;Up from Room 1D (Top Entry Room)						
+   2698  ff44
+   2699  ff44							;Objects													    
+   2700  ff44							;Offset 0 : Low byte object information (moveable stuff)							    
+   2701  ff44							;Offset 1 : High byte object information (moveable stuff)							    
+   2702  ff44							;Offset 2 : Low byte to object's current state 								    
+   2703  ff44							;Offset 3 : High byte to object's current state								    
+   2704  ff44							;Offset 4 : Low byte list of states										    
+   2705  ff44							;Offset 5 : High byte list of states										    
+   2706  ff44							;Offset 6 : Colour												    
+   2707  ff44							;Offset 7 : Colour in B&W.											    
+   2708  ff44							;Offset 8 : Size of object											    
+   2709  ff44
+   2710  ff44				   Store1
+   2711  ff44		       d9		      .byte.b	$D9	;0	 ;#0 Invisible Surround Offsets..      00			    
+   2712  ff45				   Store2
+   2713  ff45		       00		      .byte.b	$00	;1									    
+   2714  ff46				   Store3
+   2715  ff46		       01		      .byte.b	<SurroundCurr	;2									    
+   2716  ff47				   Store4
+   2717  ff47		       fc		      .byte.b	>SurroundCurr	;3									    
+   2718  ff48				   Store5
+   2719  ff48		       02		      .byte.b	<SurroundStates	;4									    
+   2720  ff49				   Store6
+   2721  ff49		       fc		      .byte.b	>SurroundStates	;5									    
+   2722  ff4a				   Store7
+   2723  ff4a		       28		      .byte.b	$28	;6									    
+   2724  ff4b				   Store8
+   2725  ff4b		       0c		      .byte.b	$0C	;7									    
+   2726  ff4c				   Store9
+   2727  ff4c		       07		      .byte.b	$07	;8									    
+   2728  ff4d
+   2729  ff4d		       f8 fb c8 00*LFF4D      .byte.b	<PortInfo1,>PortInfo1, $C8,$00, <PortStates,>PortStates, $00,$00,$00	;#1 Portcullis #1	 Black		  09		      
+   2730  ff56		       fb fb c9 00*LFF56      .byte.b	<PortInfo2,>PortInfo2, $C9,$00, <PortStates,>PortStates, $00,$00,$00	;#2 Portcullis #2	 Black		  12		 
+   2731  ff5f		       fe fb ca 00*LFF5F      .byte.b	<PortInfo3,>PortInfo3, $CA,$00, <PortStates,>PortStates, $00,$00,$00	;#3 Portcullis #3	 Black		  1B		 
+   2732  ff68		       e8 fd eb fd*LFF68      .byte.b	<AuthorInfo,>AuthorInfo, <AuthorCurr,>AuthorCurr, <AuthorStates,>AuthorStates, $0E,$0E,$00	;#4 Name		 White		  24
+   2733  ff71		       02 fe dd 00*LFF71      .byte.b	<NumberInfo,>NumberInfo, $DD,$00, <NumberStates,>NumberStates, $C8,$00,$00	;#5 Number		 Green		  2D		  
+   2734  ff7a		       a4 00 a8 00*LFF7A      .byte.b	$A4,$00, $A8,$00, <DragonStates,>DragonStates, $36,$0E,$00	;#6 Dragon #1		 Red		  36		       
+   2735  ff83		       a9 00 ad 00*LFF83      .byte.b	$A9,$00, $AD,$00, <DragonStates,>DragonStates, $1A,$06,$00	;#7 Dragon #2		 Yellow 	  3F			  
+   2736  ff8c		       ae 00 b2 00*LFF8C      .byte.b	$AE,$00, $B2,$00, <DragonStates,>DragonStates, $C8,$00,$00	;#8 Dragon #3		 Green		  48		     
+   2737  ff95		       b6 00 78 fd*LFF95      .byte.b	$B6,$00, <SwordCurr,>SwordCurr, <SwordStates,>SwordStates, $1A,$06,$00	;#9 Sword		 Yellow 	  51			
+   2738  ff9e		       bc 00 d7 fc*LFF9E      .byte.b	$BC,$00, <BridgeCurr,>BridgeCurr, <BridgeStates,>BridgeStates, $66,$02,$07	;#0A Bridge		 Purple 	  5A		      
+   2739  ffa7		       bf 00 fc fc*LFFA7      .byte.b	$BF,$00, <KeyCurr,>KeyCurr, <KeyStates,>KeyStates, $1A,$06,$00	;#0B Key #01		 Yellow 	  63			   
+   2740  ffb0		       c2 00 fc fc*LFFB0      .byte.b	$C2,$00, <KeyCurr,>KeyCurr, <KeyStates,>KeyStates, $0E,$0E,$00	;#0C Key #02		 White		  6C		      
+   2741  ffb9		       c5 00 fc fc*LFFB9      .byte.b	$C5,$00, <KeyCurr,>KeyCurr, <KeyStates,>KeyStates, $00,$00,$00	;#0D Key #03		 Black		  75		      
+   2742  ffc2		       cb 00 cf 00*LFFC2      .byte.b	$CB,$00, $CF,$00, <BatStates,>BatStates, $00,$00,$00	;#0E Bat		 Black		  7E		    
+   2743  ffcb		       a1 00 82 fd*LFFCB      .byte.b	$A1,$00, <DotCurr,>DotCurr, <DotStates,>DotStates, $08,$08,$00	;#0F Black Dot 	 Light Gray	  87		     
+   2744  ffd4		       b9 00 ef fd*LFFD4      .byte.b	$B9,$00, <ChalliseCurr,>ChalliseCurr, <ChalliseStates,>ChalliseStates, $CB,$06,$00	;#10 Challise		 Flash		  90		     
+   2745  ffdd		       b3 00 0e fe*LFFDD      .byte.b	$B3,$00, <MagnetCurr,>MagnetCurr, <MagnetStates,>MagnetStates, $00,$06,$00	;#11 Magnet		 Black		  99		 
+   2746  ffe6		       bc 00 fd fd*LFFE6      .byte.b	$BC,$00, <NullCurr,>NullCurr, <NullStates,>NullStates, $00,$00,$00	;#12 Null		 Black		  A2		   
+   2747  ffef
+   2748  ffef							;Not Used													    
+   2749  ffef		       00 00 00 00*LFFEF      .byte.b	$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+   2750  fffa
+   2751  fffa							;6502 Vectors (Not Used??											    
+   2752  fffa		       00 f0	   LFFFA      .byte.b	$00,$F0
+   2753  fffc		       00 f0	   LFFFC      .byte.b	$00,$F0
+   2754  fffe		       00 f0	   LFFFE      .byte.b	$00,$F0
