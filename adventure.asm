@@ -2509,86 +2509,26 @@ GfxDot:
                                                                                                                    
 ;Object #4 : State FF : Graphic                                                                                    
 GfxAuthor:
-       .byte $11
-       .byte $1F
-       .byte $11
-       .byte $80
-       .byte $17
-       .byte $15
-       .byte $1D
-       .byte $80
-       .byte $01
-       .byte $1F
-       .byte $01
-       .byte $80
-       .byte $17
-       .byte $15
-       .byte $1D
-       .byte $80
-       .byte $04
-       .byte $1F
-       .byte $11
-       .byte $80
-       .byte $18
-       .byte $10
-       .byte $1F
-       .byte $80
-       .byte $1F
-       .byte $05
-       .byte $1F
-       .byte $80
-       .byte $1F
-       .byte $05
-       .byte $1A
-       .byte $80
-       .byte $1F
-       .byte $15
-       .byte $11
-       .byte $80
-       .byte $1F
-       .byte $11
-       .byte $0E
-       .byte $80
-       .byte $10
-       .byte $10
-       .byte $10
-       .byte $80
-       .byte $1F
-       .byte $11
-       .byte $11
-       .byte $80
-       .byte $1F
-       .byte $05
-       .byte $1F
-       .byte $80
-       .byte $1F
-       .byte $06
-       .byte $1F
-       .byte $80
-       .byte $1F
-       .byte $05
-       .byte $07
-       .byte $80
-       .byte $1F
-       .byte $15
-       .byte $0A
-       .byte $80
-       .byte $1F
-       .byte $15
-       .byte $11
-       .byte $80
-       .byte $1F
-       .byte $10
-       .byte $10
-       .byte $80
-       .byte $1F
-       .byte $10
-       .byte $10
-       .byte $80
-       .byte $11
-       .byte $1F
-       .byte $04
-       .byte $80
+       .byte $11,$1F,$11,$80      ; I
+       .byte $17,$15,$1D,$80      ; S
+       .byte $01,$1F,$01,$80      ; T
+       .byte $17,$15,$1D,$80      ; S
+       .byte $04,$1F,$11,$80      ; {
+       .byte $18,$10,$0F,$80      ; J
+       .byte $08,$1D,$17,$80      ; a
+       .byte $1F,$07,$02,$80      ; r
+       .byte $0E,$17,$17,$80      ; e
+       .byte $0C,$1E,$1F,$80      ; d
+       .byte $10,$10,$10,$80      ; _
+       .byte $0E,$11,$11,$80      ; C
+       .byte $08,$1D,$17,$80      ; a
+       .byte $1F,$06,$1F,$80      ; m
+       .byte $1F,$07,$02,$80      ; p
+       .byte $1F,$1E,$0C,$80      ; b
+       .byte $0E,$17,$17,$80      ; e
+       .byte $1F,$10,$10,$80      ; l
+       .byte $1F,$10,$10,$80      ; l
+       .byte $11,$1F,$04,$80      ; }
        .byte $80
        .byte $80
        .byte $80
@@ -2771,7 +2711,7 @@ Store9:
 LFF4D:       .byte <PortInfo1,>PortInfo1,    $C8,$00,                      <PortStates,>PortStates,          $00,$00,$00      ;#1 Portcullis #1       Black            09                  
 LFF56:       .byte <PortInfo2,>PortInfo2,    $C9,$00,                      <PortStates,>PortStates,          $00,$00,$00      ;#2 Portcullis #2       Black            12             
 LFF5F:       .byte <PortInfo3,>PortInfo3,    $CA,$00,                      <PortStates,>PortStates,          $00,$00,$00      ;#3 Portcullis #3       Black            1B             
-LFF68:       .byte <AuthorInfo,>AuthorInfo,  <AuthorCurr,>AuthorCurr,      <AuthorStates,>AuthorStates,      $CB,$00,$00      ;#4 Name                Flash            24                
+LFF68:       .byte <AuthorInfo,>AuthorInfo,  <AuthorCurr,>AuthorCurr,      <AuthorStates,>AuthorStates,      $0E,$0E,$00      ;#4 Name                White            24                
 LFF71:       .byte <NumberInfo,>NumberInfo,  $DD,$00,                      <NumberStates,>NumberStates,      $C8,$00,$00      ;#5 Number              Green            2D              
 LFF7A:       .byte $A4,$00,                  $A8,$00,                      <DragonStates,>DragonStates,      $36,$0E,$00      ;#6 Dragon #1           Red              36                   
 LFF83:       .byte $A9,$00,                  $AD,$00,                      <DragonStates,>DragonStates,      $1A,$06,$00      ;#7 Dragon #2           Yellow           3F                      
